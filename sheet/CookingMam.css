@@ -1,0 +1,200 @@
+/* all */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 全体 */
+
+body {
+    width: 375px;
+    height: 667px;
+    /* ページ背景色 */
+    background-image: url("../img/dansyoku.jpg");
+    font-size: 95%;
+    /* フォント種類 */
+    font-family: "MS ゴシック", sans-serif;
+    /* 行の高さ */
+    line-height: 1.5;
+    /* 文字色 */
+    color: #333333;
+}
+
+
+/* アンカー 全体*/
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* サブヘッダー枠 */
+
+div.header {
+    width: 375px;
+    height: 25px;
+}
+
+
+/* 最初のヘッダー */
+
+div.first_header {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: white;
+    text-align: left;
+    background-image: url("../img/dansyoku.jpg");
+}
+
+
+/* IMGの枠 */
+
+div.img_frame {
+    width: 260px;
+    height: 55px;
+    position: relative;
+}
+
+
+/* れしぴっぴ画像 */
+
+img.top_icon {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+}
+
+
+/* インターフェース枠 */
+
+div.menu_icon_frame {
+    width: 120px;
+    height: 50px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 240px;
+}
+
+
+/* ２つ分の枠 */
+
+div.frame_set {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+
+/* ユーザーアイコン */
+
+i.fas.fa-user.fa-3x {
+    /* height: 50px; */
+    position: absolute;
+    top: 4px;
+    left: 23px;
+}
+
+i.fas.fa-user.fa-3x:active {
+    color: rgb(243, 151, 205);
+}
+
+i.fas.fa-folder.fa-3x:active {
+    color: rgb(243, 151, 205);
+}
+
+
+/* フォルダーアイコン */
+
+i.fas.fa-folder.fa-3x {
+    height: 50px;
+    position: absolute;
+    top: 4px;
+    left: 73px;
+}
+
+
+/* ボタン全体 */
+
+i {
+    color: #fff;
+}
+
+
+/* ボタン装飾２ */
+
+button:active {
+    color: #cea38a;
+}
+
+
+/* 検索フォーム枠 */
+
+div.sub_header {
+    width: 375px;
+    height: 50px;
+    position: relative;
+}
+
+
+/* 検索フォーム */
+
+.inp {
+    height: 30px;
+    padding: 0 10px;
+    width: 275px!important;
+    outline: 0;
+    border: 0;
+    position: absolute;
+    top: 5px;
+    left: 18px;
+}
+
+
+/* 検索ボタン */
+
+.subbtn {
+    width: 50px;
+    height: 30px;
+    background: #7fbfff;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-radius: 0 15px 15px 0;
+    outline: 0;
+    position: absolute;
+    left: 313px;
+    top: 5px;
+}
+
+
+/* 検索虫眼鏡 */
+
+i.fas.fa-search::before {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+
+/* ランダムアイコン枠 */
+
+div.random_shuffle {
+    width: 90%;
+    height: 275%;
+    background-color: rgb(255, 255, 255);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* ランダムアイコン画像 */
+
+img.shuffle {
+    width: 337.5px;
+    height: 151px;
+}
