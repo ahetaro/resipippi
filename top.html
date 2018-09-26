@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cooking Mam</title>
+    <link rel="stylesheet" href="sheet/CookingMam.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        /* all */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 全体 */
+        
+        body {
+            /* ページ背景色 */
+            background-color: rgb(245, 243, 240);
+            font-size: 95%;
+            /* フォント種類 */
+            font-family: "MS ゴシック", sans-serif;
+            /* 行の高さ */
+            line-height: 1.5;
+            /* 文字色 */
+            color: #333333;
+        }
+        /* アンカー 全体*/
+        
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        /* メインヘッダー枠 */
+        
+        div.header_page {
+            width: 375 px;
+            height: 200px;
+        }
+        /* サブヘッダー枠 */
+        
+        div.header {
+            width: 375xpx;
+            height: 50px;
+        }
+        /* 最初のヘッダー */
+        
+        div.first_header {
+            width: 100%;
+            position: relative;
+            background: white;
+            text-align: left;
+        }
+        /* IMGの枠 */
+        
+        div.img_frame {
+            width: 260px;
+            height: 55px;
+            position: relative;
+        }
+        /* れしぴっぴ画像 */
+        
+        img.top_icon {
+            position: absolute;
+            left: 0px;
+            width: 230px;
+            height: 60px;
+        }
+        /* インターフェース枠 */
+        
+        div.menu_icon_frame {
+            width: 55%;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+        }
+        /* ２つ分の枠 */
+        
+        div.frame_set {
+            width: 100%;
+            height: 50px;
+            position: relative;
+        }
+        /* 左側のユーザーメイン枠 */
+        
+        div.left_button {
+            width: 50%;
+            height: 50px;
+            position: absolute;
+            right: 40px;
+        }
+        /* 左のユーザーサブ枠 */
+        
+        div.left_icon_set {
+            width: 100%;
+            height: 50px;
+            position: relative;
+        }
+        /* 右側レシピメイン枠 */
+        
+        div.right_button {
+            width: 50%;
+            height: 50px;
+            position: absolute;
+            left: 130px;
+        }
+        /* 右側レシピサブ枠 */
+        
+        div.right_icon_set {
+            width: 100%;
+            height: 50px;
+            position: relative;
+        }
+        /* ユーザーアイコン */
+        
+        i.fas.fa-user.fa-3x {
+            height: 50px;
+            position: absolute;
+            top: 5px;
+        }
+        
+        i.fas.fa-user.fa-3x:active {
+            color: #42ff42;
+        }
+        
+        i.fas.fa-folder.fa-3x:active {
+            color: #42ff42;
+        }
+        /* ユーザーボタン */
+        
+        button.first_button {
+            height: 50px;
+            position: absolute;
+            left: 45px;
+            top: 0px;
+        }
+        /* フォルダーアイコン */
+        
+        i.fas.fa-folder.fa-3x {
+            position: absolute;
+            top: 10px;
+        }
+        /* レシピボタン */
+        
+        button.second_button {
+            width: 51px;
+            height: 50px;
+            position: absolute;
+            left: 50px;
+            top: 0px;
+        }
+        /* ボタン全体 */
+        
+        button {
+            list-style-type: none;
+            border: 1px solid #15aeec;
+            background-color: #49c0f0;
+            background-image: -webkit-linear-gradient(top, #49c0f0, #2cafe3);
+            background-image: linear-gradient(to bottom, #49c0f0, #2cafe3);
+            border-radius: 4px;
+            color: #fff;
+            line-height: 55px;
+            -webkit-transition: none;
+            transition: none;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+        }
+        
+        button:hover {
+            border: 1px solid #1090c3;
+            background-color: #1ab0ec;
+            background-image: -webkit-linear-gradient(top, #1ab0ec, #1a92c2);
+            background-image: linear-gradient(to bottom, #1ab0ec, #1a92c2);
+        }
+        
+        button:active {
+            background: #1a92c2;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
+            color: #1679a1;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+        }
+        /* ----------------------なう--8/31----------------------------------------- */
+        /* 検索フォーム枠 */
+        
+        div.sub_header {
+            width: 375px;
+            height: 50px;
+            position: relative;
+        }
+        /* 検索フォーム */
+        
+        #inp {
+            height: 30px;
+            padding: 0 10px;
+            position: absolute;
+            left: 0;
+            top: 80;
+            width: 275px!important;
+            border: solid 3px #eaeaea;
+            outline: 0;
+        }
+        /* 検索ボタン */
+        
+        #subbtn {
+            width: 20%;
+            height: 30px;
+            position: absolute;
+            left: 250px;
+            top: 4px;
+            background: #7fbfff;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            border-radius: 0 25px 25px 0;
+            outline: 0;
+            position: absolute;
+            left: 300px;
+        }
+        /* 検索虫眼鏡 */
+        
+        i.fas.fa-search::before {
+            position: absolute;
+            top: 5px;
+            left: 25px;
+        }
+        
+        #subbtn:hover {
+            background: #eaeaea;
+            color: #7fbfff;
+        }
+        
+        img.random_shuffle {
+            width: 10 px;
+        }
+        /* ------------------------------------------------------------ */
+    </style>
+</head>
+
+<body>
+    <!-- メインヘッダー -->
+    <div class="header_page">
+        <!-- サブヘッダー -->
+        <div id="header">
+            <div class="first_header">
+                <!-- アイコン枠 -->
+                <div class="img_frame">
+                    <!-- トップアイコン -->
+                    <img src="1111.png" alt="cook" class="top_icon">
+                </div>
+
+                <!-- メニュー枠（インターフェース） -->
+                <div class="menu_icon_frame">
+                    <!-- 二つ分のメニュー枠 -->
+                    <div class="frame_set">
+                        <!-- 左側ユーザーメイン枠 -->
+                        <div class="left_button">
+                            <!-- 左のユーザーサブ枠 -->
+                            <div class="left_icon_set">
+                                <!-- ユーザーアイコン -->
+                                <i class="fas fa-user fa-3x"></i>
+
+                            </div>
+                        </div>
+                        <!-- 右側レシピメイン枠 -->
+                        <div class="right_button">
+                            <!-- 右側レシピサブ枠 -->
+                            <div class="rigtht_icon_set">
+                                <!-- フォルダーアイコン -->
+                                <i class="fas fa-folder fa-3x"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="sub_header">
+            <!-- 入力フォームのまとまり -->
+            <form action="https://www.merukari.com" class="header_from">
+                <!-- 入力フォーム -->
+                <input type="text" id="inp" placeholder="食材・料理">
+                <!-- 検索ボタン_虫眼鏡アイコン -->
+                <button type="submit" id="subbtn"><i class="fas fa-search"></i> </button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="random_shuffle ">
+        <img src="4444.png" alt="">
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

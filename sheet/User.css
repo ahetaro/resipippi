@@ -1,0 +1,152 @@
+        body {
+            background-image: url("../img/dansyoku.jpg");
+            text-align: center;
+            width: 1000px;
+            height: 100%;
+            position: relative;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        div.icon_space {
+            height: 200px;
+            margin: 0 auto;
+            position: absolute;
+            left: 180px;
+        }
+        
+        body,
+        p,
+        form,
+        input {
+            margin: 0
+        }
+        
+        div#form {
+            width: 800px;
+            height: 800px;
+            margin: 0px auto;
+            padding: 20px;
+            border: 1px solid #555;
+            position: absolute;
+            top: 200px;
+            left: 80px;
+        }
+        
+        form p {
+            font-size: 60px;
+        }
+        
+        p.check {
+            font-size: 40px;
+        }
+        
+        .form-title {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: solid 5px #fff;
+        }
+        
+        .username {
+            margin-bottom: 20px;
+        }
+        
+        .password {
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 600px;
+            height: 30px;
+            padding: 4px;
+            font-size: 50px;
+            margin: 0 auto;
+        }
+        
+        input[type="checkbox"] {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 420px;
+            left: 190px;
+        }
+        
+        .submit {
+            text-align: center;
+        }
+        
+        #form {
+            width: 80%;
+            height: 800px;
+            background: #053352;
+            -moz-border-radius: 6;
+            border-radius: 6px;
+            font-family: Courier New;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 20px 20px 20px 20px;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .submit input {
+            background: #f78181;
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(to bottom, #f78181, #f78181);
+            -webkit-border-radius: 8;
+            -moz-border-radius: 8;
+            border-radius: 8px;
+            -webkit-box-shadow: 1px 1px 3px #666666;
+            -moz-box-shadow: 1px 1px 3px #666666;
+            box-shadow: 1px 1px 3px #666666;
+            font-family: Courier New;
+            color: #ffffff;
+            font-size: 50px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            position: absolute;
+            top: 550px;
+            left: 300px;
+        }
+        
+        .submit input:hover {
+            background: #f5c7c7;
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(to bottom, #f5c7c7, #f5c7c7);
+            text-decoration: none;
+        }
+        
+        #form {
+            background: #053352;
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(to bottom, #053352, Courier New);
+            -webkit-border-radius: 6;
+            -moz-border-radius: 6;
+            border-radius: 6px;
+            font-family: Courier New;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 20px 20px 20px 20px;
+            text-decoration: none;
+        }
+        
+        div.break_time {
+            /* background-color: red; */
+            width: 1000px;
+            height: 600px;
+        }

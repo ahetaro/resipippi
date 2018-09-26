@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>formsample</title>
+    <link rel="stylesheet" type="text/css" href="../sheet/User.css" media="all" />
+    <style>
+        body {
+            background-image: url("https://cdn.discordapp.com/attachments/481797635997564938/486817832839938072/dansyoku.jpg");
+            text-align: center;
+        }
+        
+        div.icon_space {
+            width: 20px;
+            height: 30px;
+        }
+        
+        body,
+        p,
+        form,
+        input {
+            margin: 0
+        }
+        
+        #form {
+            width: 800px;
+            height: 800px;
+            margin: 0px auto;
+            padding: 20px;
+            border: 1px solid #555;
+        }
+        
+        form p {
+            font-size: 45px;
+        }
+        
+        p.check {
+            font-size: 20px;
+        }
+        
+        .form-title {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: solid 5px #fff;
+        }
+        
+        .username {
+            margin-bottom: 20px;
+        }
+        
+        .password {
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 250px;
+            height: 30px;
+            padding: 4px;
+            font-size: 50px;
+            margin: 0 auto;
+        }
+        
+        input[type="checkbox"] {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 382px;
+            left: 50px;
+        }
+        
+        .submit {
+            text-align: center;
+        }
+        
+        #form {
+            width: 80%;
+            height: 800px;
+            background: #053352;
+            -moz-border-radius: 6;
+            border-radius: 6px;
+            font-family: Courier New;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 20px 20px 20px 20px;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .submit input {
+            background: #f78181;
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(top, #f78181, #f78181);
+            background-image: linear-gradient(to bottom, #f78181, #f78181);
+            -webkit-border-radius: 8;
+            -moz-border-radius: 8;
+            border-radius: 8px;
+            -webkit-box-shadow: 1px 1px 3px #666666;
+            -moz-box-shadow: 1px 1px 3px #666666;
+            box-shadow: 1px 1px 3px #666666;
+            font-family: Courier New;
+            color: #ffffff;
+            font-size: 50px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            position: absolute;
+            top: 450px;
+            left: 76px;
+        }
+        
+        .submit input:hover {
+            background: #f5c7c7;
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(top, #f5c7c7, #f5c7c7);
+            background-image: linear-gradient(to bottom, #f5c7c7, #f5c7c7);
+            text-decoration: none;
+        }
+        
+        #form {
+            background: #053352;
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(top, #053352, Courier New);
+            background-image: linear-gradient(to bottom, #053352, Courier New);
+            -webkit-border-radius: 6;
+            -moz-border-radius: 6;
+            border-radius: 6px;
+            font-family: Courier New;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 20px 20px 20px 20px;
+            text-decoration: none;
+            height: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon_space">
+        <img src="../img/resipippi_touka3.png" alt="">
+    </div>
+    <div id="form">
+        <p class="form-title">Login</p>
+        <form action="post">
+            <p>Username</p>
+            <p class="username"><input type="text" name="username" maxlength="32" autocomplete="OFF" /></p>
+            <p>Password</p>
+            <p class="password"><input type="password" name="password" maxlength="32" autocomplete="OFF" /></p>
+            <p class="check"><input type="checkbox" name="checkbox" />パスワードを保存</p>
+            <p class="submit"><input type="submit" value="Enter" /></p>
+        </form>
+    </div>
+
+
+    <div class="break_time">
+        <!-- <img src="../img/coffee_touka.png" alt=""> -->
+    </div>
+</body>
+
+</html>
