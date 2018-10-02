@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="sheet/CookingMam.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            // ボタンを押したら通信する関数を起動
+            $("#cp_btn").click(function() {
+
+                $.ajax({
+                    type: "POST",
+                    url: "sample.php",
+                    data: {
+                        "sample": 2
+                    },
+                    // 通信に成功したとき新たな関数を起動しここにHTMLに表示するコードを書く
+                    success: getRecipeData
+                });
+            });
+        });
+
+        function getRecipeData(result) {
+            result = debugJsonData;
+            // const $container = $('.container');
+            // $container.find('.title').text()
+            // $container.find('.title-label').append()
+            $("div").append(`<h2>${result.recipeName}</h2>`);
+            // 新しめ IE11で動かない
+            for (image of result.images) {
+                $("div").append(`<img src="${image}">`);
+            }
+            // 昔ながら
+            $("div").append(`<ol id="tejyun"></ol>`);
+            result.recipeStep.forEach(step => {
+                $("#tejyun").append(`<li>${step}</li>`);
+            });
+        }
+        // PHPが返すデータ {
+        // var debugJsonData = {
+        //     recipeName: "カレー",
+        //     recipeStep:[
+        //             "切る",
+        //             "焼く",
+        //             "煮込む"
+        //                     ],
+        //     images:[
+        //             "sample.jpg"
+        //                         ]
+        //             };
+        //     }
+    </script>
+
+    <!-- メインヘッダー -->
+    <div class="header_page">
+        <!-- サブヘッダー -->
+        <div id="header">
+            <div class="first_header">
+                <!-- アイコン枠 -->
+                <div class="img_frame">
+                    <!-- トップアイコン -->
+                    <img src="resipippi_use_icon.png" alt="cook" class="top_icon">
+                </div>
+
+                <!-- メニュー枠（インターフェース） -->
+                <div class="menu_icon_frame">
+                    <!-- 二つ分のメニュー枠 -->
+                    <div class="frame_set">
+                        <!-- 左側ユーザーメイン枠 -->
+                        <div class="left_button">
+                            <!-- 左のユーザーサブ枠 -->
+                            <div class="left_icon_set">
+                                <!-- ユーザーアイコン -->
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                        </div>
+                        <!-- 右側レシピメイン枠 -->
+                        <div class="right_button">
+                            <!-- 右側レシピサブ枠 -->
+                            <div class="rigtht_icon_set">
+                                <!-- フォルダーアイコン -->
+                                <i class="fas fa-folder fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub_header">
+            <!-- 入力フォームのまとまり -->
+            <form action="https://www.merukari.com" class="header_from">
+                <!-- 入力フォーム -->
+                <input type="text" id="inp" placeholder="食材・料理">
+                <!-- 検索ボタン_虫眼鏡アイコン -->
+                <button type="submit" id="subbtn"><i class="fas fa-search"></i> </button>
+            </form>
+        </div>
+    </div>
+    <div class="center">
+        <img src="chenge_resipi.png" alt="サンプル画像" class="sub_top" />
+    </div>
+    <div id="target"></div>
+    <a href="#" class="cp_btn" id="bt">スタート</a>
+</body>
+
+</html>
